@@ -1,0 +1,1018 @@
+<html lang="pt-BR"><head></head><body>﻿
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drogasil</title>
+    <link href="css2-1" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link href="css/flickity.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="js/latest-4.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+<script>
+  window.pixelId = "6894c2744413661f0773f1f2";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "spwsrodj2r");
+</script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            background-color: #f7f7f7;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        .top-bar {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 12px 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .top-bar .top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .top-bar .top-row i {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .top-bar .logo {
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            border-radius: 24px;
+            padding: 8px 16px;
+            height: 40px;
+            position: relative;
+        }
+
+        .search-bar input {
+            flex: 1;
+            border: none;
+            background: none;
+            font-size: 14px;
+            color: #333;
+            outline: none;
+            padding-right: 56px;
+        }
+
+        .search-bar .search-text {
+            color: #666;
+            font-size: 14px;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .search-bar .search-icon {
+            position: absolute;
+            right: 4px;
+            background-color: #DB0016;
+            color: #fff;
+            width: 48px;
+            height: 32px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .search-bar .search-icon:hover {
+            background-color: #e67300;
+        }
+
+        .search-bar .search-icon i {
+            font-size: 16px;
+        }
+
+        .product-image {
+    margin-top: 16px;
+    background-color: #fff;
+    text-align: center; /* Centraliza a imagem */
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 500px; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover;
+}
+
+        .thumbnails {
+            margin: 12px 16px;
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .thumbnails::-webkit-scrollbar {
+            display: none;
+        }
+
+        .thumbnails .thumbnail {
+            width: 75px;
+            height: 75px;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            flex-shrink: 0;
+            border: 1px solid #e0e0e0;
+            transition: border-color 0.2s ease;
+        }
+
+        .thumbnails .thumbnail.active {
+            border: 2px solid #333;
+        }
+
+        .thumbnails .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .separator {
+            width: 100%;
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 16px 0;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            gap: 8px;
+        }
+
+        .rating .stars {
+            display: flex;
+            gap: 4px;
+        }
+
+        .rating .stars i {
+            color: #ffcc00;
+            font-size: 14px;
+        }
+
+        .rating .text {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .rating .heart {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+            margin-left: auto;
+            transition: color 0.2s ease;
+        }
+
+        .rating .heart:hover {
+            color: #ff4444;
+        }
+
+        .product-title {
+            margin: 16px 16px 8px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .product-description {
+            margin: 0 16px 16px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .product-info {
+            margin: 16px;
+        }
+
+        .product-info .feature {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .product-info .feature i {
+            font-size: 16px;
+            margin-right: 8px;
+            color: #28a745;
+        }
+        .discount-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dashed-line {
+    flex: 1; /* Faz com que a linha se expanda para preencher o espaço */
+    border-top: 1px dashed #ccc; /* Linha pontilhada */
+    margin: 0 10px; /* Espaçamento entre o badge e as linhas */
+}
+
+.discount-badge {
+    background-color: #DB0016; /* Cor de fundo semelhante ao bordô */
+    color: #fff; /* Cor do texto */
+    font-size: 14px; /* Tamanho do texto */
+    font-weight: bold; /* Negrito */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    z-index: 1; /* Coloca o badge acima das linhas */
+    white-space: nowrap; /* Evita quebra de linha no texto */
+}
+
+.product-info .price {
+    text-align: center; /* Centraliza ambos os preços */
+    margin: 10px 0;
+}
+
+.product-info .price .old-price {
+    font-size: 18px; /* Tamanho menor para o preço original */
+    color: #DB0016; /* Cor mais suave para o preço original */
+    text-decoration: line-through; /* Risca o preço original */
+    display: block; /* Faz o preço antigo aparecer acima do novo preço */
+    margin-bottom: 5px; /* Espaçamento entre o preço antigo e o novo */
+}
+
+.product-info .price .new-price {
+    font-size: 35px; /* Tamanho maior para o novo preço */
+    font-weight: 600;
+    color: #229A00; /* Cor destacada para o novo preço */
+}
+
+.product-info .price-alert {
+    background-color: #f8d7da; /* Cor de fundo suave para destacar */
+    color: #721c24; /* Cor do texto (vermelho escuro) */
+    padding: 10px;
+    font-size: 16px;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 10px; /* Espaçamento abaixo da mensagem */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #f5c6cb; /* Borda de destaque */
+    display: flex;
+    align-items: center; /* Alinha verticalmente a bolinha e o texto */
+    justify-content: center;
+}
+
+.neon-dot {
+    font-size: 24px; /* Tamanho maior para a bolinha */
+    color: #DB0016; /* Cor vermelha para a bolinha */
+    margin-right: 8px; /* Espaço entre a bolinha e o texto */
+    animation: neon-dot 1.5s ease-in-out infinite; /* Animação de neon */
+}
+
+@keyframes neon-dot {
+    0% {
+        text-shadow: 0 0 5px #DB0016, 0 0 10px #DB0016;
+    }
+    50% {
+        text-shadow: 0 0 15px #DB0016, 0 0 20px #DB0016;
+    }
+    100% {
+        text-shadow: 0 0 5px #DB0016, 0 0 10px #DB0016;
+    }
+}
+
+        .button-card-wrapper {
+            padding: 0 16px;
+            margin-bottom: 32px;
+        }
+
+        .product-info .button {
+            width: 100%;
+        }
+
+        .product-info .button button {
+            width: 100%;
+            height: 48px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #334FDC;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .product-info .button button:hover {
+            background-color: #e67300;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            margin-top: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            height: 48px;
+            cursor: pointer;
+            background-color: #fff;
+        }
+
+        .card-header span {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .card-header i {
+            font-size: 12px;
+            color: #666;
+            transition: transform 0.3s ease;
+        }
+
+        .card-header i.rotate {
+            transform: rotate(180deg);
+        }
+
+        .card-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .card-content.expanded {
+            max-height: 500px;
+        }
+
+        .card-content-inner {
+            padding: 16px;
+        }
+
+        .card-content-inner p {
+            font-size: 14px;
+            color: #666;
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .separator-card {
+            width: 100%;
+            height: 1px;
+            background-color: #e0e0e0;
+        }
+
+        .reviews-section {
+            padding: 24px 16px;
+        }
+
+        .reviews-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .reviews-summary {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .reviews-stars {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .reviews-stars i {
+            color: #ffcc00;
+            font-size: 16px;
+        }
+
+        .reviews-rating {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+
+        .reviews-count {
+            font-size: 13px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .testimonial-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .testimonial-header .name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .testimonial-header .date {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .testimonial-body {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .testimonial-stars {
+            color: #FFC107; /* Estrelas douradas */
+        }
+
+        .testimonial-images {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .testimonial-images img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .testimonial-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .testimonial-footer .like-dislike {
+            display: flex;
+            align-items: center;
+        }
+
+        .like-dislike i {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .like-dislike i:hover {
+            color: #007bff; /* Azul de destaque */
+        }
+
+        .like-dislike .count {
+            margin-left: 5px;
+        }
+
+        .client-photo {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .read-more-button {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            height: 48px;
+            margin: 24px auto;
+            background-color: #DB0016;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .read-more-button:hover {
+            background-color: #e67300;
+        }
+
+        .footer {
+            background-color: #fff;
+            padding: 32px 16px;
+        }
+
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .footer-links {
+            margin-bottom: 32px;
+        }
+
+        .footer-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+        }
+
+        .footer-link span {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .footer-link i {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .payment-methods {
+            margin-bottom: 32px;
+        }
+
+        .payment-methods-title {
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            
+            margin-bottom: 16px;
+        }
+
+        .payment-icons {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding: 0 16px;
+        }
+
+        .payment-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        .social-icons i {
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .social-icons i:hover {
+            color: #ff7f00;
+        }
+
+        .footer-disclaimer {
+            background-color: #fff;
+            
+        }
+
+        .footer-disclaimer p {
+            font-size: 12px;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .footer-disclaimer p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            .slider .carousel-cell {
+                height: 400px;
+            }
+            
+            .button-card-wrapper {
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .payment-icons {
+                justify-content: center;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .footer-disclaimer {
+                padding: 32px;
+            }
+
+            .footer-disclaimer p {
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+
+
+    <div class="top-bar">
+        <div class="top-row">
+            <i class="bi bi-list"></i>
+            <img src="images/drogasil-logo.png" alt="Logo" class="logo" style="width: 150px; height: 50px;">
+            <i class="bi bi-cart"></i>
+        </div>
+        <div class="search-bar">
+            <span class="search-text">O que está buscando hoje?</span>
+            <input type="text" placeholder="">
+            <div class="search-icon">
+                <i class="bi bi-search"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-image">
+        <img src="images/mounjaro.png" alt="Imagem do Mounjaro">
+    </div>
+
+
+    <div class="separator"></div>
+
+    <div class="rating">
+        <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+        </div>
+        <div class="text">5.0 (de 1828 avaliações)</div>
+        <i class="bi bi-heart heart"></i>
+    </div>
+
+    <div class="product-title">Mounjaro Tirzepatida 10mg Solução Injetável - 2 Seringas Preenchidas de 0,5ml</div>
+    <div class="product-description">Vendido e Entregue por Drogasil</div>
+
+    <div class="product-info">
+        <div class="feature"><i class="bi bi-check-circle"></i> Controle efetivo de glicose e peso</div>
+        <div class="feature"><i class="bi bi-check-circle"></i> Fórmula original e segura</div>
+        <div class="feature"><i class="bi bi-check-circle"></i> Uso semanal prático e eficiente</div>
+        <div class="feature"><i class="bi bi-check-circle"></i> Perda de peso média de 19,5%</div>
+        <div class="feature"><i class="bi bi-check-circle"></i> Envio refrigerado com qualidade garantida</div>
+        <div class="discount-container">
+            <div class="dashed-line"></div>
+            <div class="discount-badge">90% OFF</div>
+            <div class="dashed-line"></div>
+        </div>
+        <div class="price">
+            <div class="price-alert">
+                <span class="neon-dot">•</span> Vendido a Preço de Custo
+            </div>
+            <span class="old-price">De R$ 2.089,00</span>
+            <strong class="new-price">Por R$ 97,90</strong>
+        </div>
+        <div class="button-card-wrapper">
+            <div class="button">
+  <button id="btnComprar">
+  <strong>COMPRAR AGORA</strong>
+</button>
+<script>
+  // 1) Seleciona o botão
+  const btnComprar = document.getElementById('btnComprar');
+
+  // 2) Função que roda no clique
+  btnComprar.addEventListener('click', () => {
+    // 2.1) Pega valores do localStorage
+    const cpfUsuario = localStorage.getItem('cpfUsuario') || '';
+    const dadosJSON  = localStorage.getItem('dadosUsuario') || '{}';
+    const dadosUsuario = JSON.parse(dadosJSON);
+    const telephone = localStorage.getItem('tel') || '';
+
+    // 2.2) URL base de redirecionamento
+    const baseUrl = 'https://pay.drogazilpagamento.online/5pjw3RnlRwl32lQ';
+
+    // 2.3) Monta os parâmetros
+    const params = new URLSearchParams({
+      document:   cpfUsuario,
+      name:       dadosUsuario.NOME || '',
+      telephone:  telephone
+    });
+
+    // 2.4) Faz o redirect com os parâmetros
+    window.location.href = `${baseUrl}?${params.toString()}`;
+  });
+</script>
+</div>
+
+            <div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Descrição</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="separator-card"></div>
+                        <p><b>Mounjaro Tirzepatida 10mg Solução Injetável - 2 Seringas Preenchidas de 0,5ml</b><br><br>
+                            Mounjaro é uma solução injetável indicada para o tratamento de diabetes tipo 2 e para o controle de peso, com base na tirzepatida, uma substância inovadora que age em dois receptores no organismo, promovendo controle glicêmico eficaz e redução significativa do apetite. Cada embalagem contém 2 seringas preenchidas de 0,5ml, correspondendo a uma dose de 10mg de tirzepatida, oferecendo praticidade e eficácia no tratamento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Benefícios</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="separator-card"></div>
+                        <p><strong>• Controle Glicêmico:</strong> Auxilia na redução dos níveis de glicose no sangue, promovendo estabilidade para diabéticos tipo 2.</p>
+                        <p><strong>• Redução do Apetite:</strong> Ajuda a diminuir o apetite, favorecendo a perda de peso de forma natural.</p>
+                        <p><strong>• Perda de Peso:</strong> Comprovado para redução significativa de peso, ideal para pacientes com sobrepeso ou obesidade.</p>
+                        <p><strong>• Praticidade:</strong> Injeção semanal fácil de aplicar em casa.</p>
+                        <p><strong>• Ação Dupla:</strong> Atua em dois receptores (GLP-1 e GIP) para maior eficácia no controle glicêmico e emagrecimento.</p>
+                        <p><strong>• Resultados Rápidos:</strong> Resultados visíveis em curto prazo, com acompanhamento médico.</p>
+                        <p>Mounjaro oferece uma solução eficiente e prática para o controle do diabetes e emagrecimento.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Ingredientes</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="separator-card"></div>
+                        <p>Mounjaro contém tirzepatida, um composto inovador que atua nos receptores GLP-1 e GIP. Além disso, a solução injetável também contém outros excipientes necessários para a formulação do produto. Consulte a bula para mais detalhes sobre a composição completa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews-section">
+        <h2 class="reviews-title">Avaliações dos clientes</h2>
+        
+        <div class="reviews-summary">
+            <div class="reviews-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <span class="reviews-rating">5.0</span>
+            </div>
+            <div class="reviews-count">de 1828 avaliações</div>
+        </div>
+
+        <!-- Depoimento 1 -->
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="images/1.png" alt="Foto do Cliente" class="client-photo">
+                <div>
+                    <span class="name">Maria S. - São Paulo/SP</span><br>
+                    <span class="date"><i>enviado há 12 minutos atrás</i></span>
+                </div>
+            </div>
+            <div class="testimonial-stars my-2">
+                <!-- Avaliação em estrelas -->
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="testimonial-body">
+                "É triste saber que o Mounjaro foi vendido por preços abusivos por tanto tempo, mas fico feliz que a justiça tenha agido e agora posso comprar o medicamento a um preço justo. Estou no tratamento há 3 semanas e estou vendo resultados incríveis, já perdi 8kg"
+            </div>
+            <div class="testimonial-footer">
+                <div class="like-dislike">
+                    <i class="fas fa-thumbs-up"></i> <span class="count">46</span>
+                    <i class="fas fa-thumbs-down"></i> <span class="count">2</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="images/2.png" alt="Foto do Cliente" class="client-photo">
+                <div>
+                    <span class="name">João P. - Salvador/BA</span><br>
+                    <span class="date"><i>enviado há 5h atrás</i></span>
+                </div>
+            </div>
+            <div class="testimonial-stars my-2">
+                <!-- Avaliação em estrelas -->
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="testimonial-body">
+                "tô mt satisfeito com o mounjaro! em poucas semanas já perdi peso de forma bem tranquila, sem mt esforço. tô me sentindo melhor, mais disposto e confiante tbm. e agora com o preço mais em conta, tô conseguindo seguir o tratamento de boa, sem aperto"
+            </div>
+            <div class="testimonial-footer">
+                <div class="like-dislike">
+                    <i class="fas fa-thumbs-up"></i> <span class="count">27</span>
+                    <i class="fas fa-thumbs-down"></i> <span class="count">1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="images/3.png" alt="Foto do Cliente" class="client-photo">
+                <div>
+                    <span class="name">Beatriz R. – Rio de Janeiro/RJ</span><br>
+                    <span class="date"><i>enviado há 2 dias atrás</i></span>
+                </div>
+            </div>
+            <div class="testimonial-stars my-2">
+                <!-- Avaliação em estrelas -->
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="testimonial-body">
+                "já tava quase desistindo de tudo, mas aí vi essa campanha e resolvi tentar. foi a melhor coisa q fiz! perdi peso sem sofrimento e ainda economizei mt no tratamento"
+            </div>
+            <div class="testimonial-footer">
+                <div class="like-dislike">
+                    <i class="fas fa-thumbs-up"></i> <span class="count">34</span>
+                    <i class="fas fa-thumbs-down"></i> <span class="count">0</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="read-more-button">Ler mais avaliações</button>
+    </div>
+
+    
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Logo Footer">
+        </div>
+        
+        <div class="footer-links">
+            <div class="footer-link">
+                <span>Sobre a Drogasil</span>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="footer-link">
+                <span>Atendimento</span>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="footer-link">
+                <span>Suporte</span>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="footer-link">
+                <span>Perfis</span>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+        </div>
+
+        <div class="payment-methods">
+            <div class="payment-methods-title">Meios de Pagamento</div>
+            <div class="payment-icons">
+                <img src="images/pix.png" alt="Pagamento 8" class="payment-icon">
+            </div>
+        </div>
+
+       
+
+        <div class="social-icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-youtube"></i>
+            <i class="bi bi-twitter"></i>
+        </div>
+
+        <div class="footer-disclaimer">
+            <p>© 2024 Raia Drogasil. Todos os direitos reservados.</p>
+            
+            <p>Raia Drogasil SA | DROGASIL | 61.585.865/0240-93 | I.E. 116.756.280.113 | Av. Nsa. Sra. Assunção, 638 | Butantã | São Paulo (SP) | CEP 05359-001 | Para dúvidas, elogios e reclamações acesse nossa Central de Atendimento no Whatsapp | Farmacêutico responsável: Gisele da Penha Barbosa | CRF 89453 | Polo Butantã (1714 e 1715 Raia e Drogasil) | AFE: 7.17094.5 | CMVS - 355030801-477-002443-1-7. As informações contidas neste site não devem ser usadas para automedicação e não substituem, em hipótese alguma, as orientações dadas pelo profissional da área médica. Somente o médico está apto a diagnosticar qualquer problema de saúde e prescrever o tratamento adequado. Ao persistirem os sintomas, um médico deverá ser consultado. Os preços e promoções divulgados no site são válidos apenas para compras feitas pela internet. Maiores esclarecimentos, consultar o site: www.anvisa.gov.br.</p>
+
+            <p>A Raia Drogasil SA trabalha com as tecnologias mais avançadas de proteção de dados, para que você possa realizar suas compras com tranquilidade. A privacidade e a segurança dos clientes são compromissos da Raia Drogasil SA. Todos os pedidos efetuados estão sujeitos à confirmação da disponibilidade de produto em nosso estoque.</p>
+        </div>
+    </footer>
+
+    <script src="js/flickity.pkgd.min.js"></script>
+    <script>
+        const mainSlider = document.querySelector('.slider');
+        const flktyMain = new Flickity(mainSlider, {
+            wrapAround: true,
+            prevNextButtons: false,
+            pageDots: true
+        });
+
+        function selectSlide(index) {
+            flktyMain.select(index);
+            document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+        }
+
+        flktyMain.on('change', (index) => {
+            document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+        });
+
+        function toggleCard(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            content.classList.toggle('expanded');
+            icon.classList.toggle('rotate');
+        }
+        
+        
+    </script>
+    
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    var descricaoCard = document.querySelector('.button-card-wrapper .card');
+    if (descricaoCard) {
+        
+        var cardContent = descricaoCard.querySelector('.card-content');
+        cardContent.classList.add('expanded');
+
+        
+        var icon = descricaoCard.querySelector('.card-header i');
+        icon.classList.add('rotate');
+    }
+});
+</script>
+
+
+</body></html>
